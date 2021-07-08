@@ -20,6 +20,10 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+:focus {
+   outline: none;
+}
+
 body {
    background-color: #f2f2f2;
    font-family: 'Poppins', sans-serif;

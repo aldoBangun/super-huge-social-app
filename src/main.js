@@ -7,7 +7,7 @@ import store from './store/index.js';
 // Global Components
 import BaseButton from './components/UI/BaseButton';
 import BaseCard from './components/UI/BaseCard';
-import "@/assets/styles/main.css";
+import './index.css';
 
 const app = createApp(App);
 
