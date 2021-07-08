@@ -1,6 +1,6 @@
 <template>
    <TheHeader />
-   <div class="w-1/2 mx-auto">
+   <div class="w-1/3 mx-auto">
       <router-view></router-view>
    </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 }
 
 body {
-   background-color: #f2f2f2;
+   @apply bg-gray-100;
    font-family: 'Poppins', sans-serif;
 }
 

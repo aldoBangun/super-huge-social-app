@@ -1,47 +1,63 @@
 <template>
-   <base-card>
-      <div class="flex space-x-5">
-         <div class="[avatar] rounded-full w-10 h-10 bg-blue">
-            <img
-               :src="image"
-               :alt="firstName + '-image'"
-               class="card-image"
-               v-if="isExistImage"
-            />
-            <div v-else>{{ textAvatar }}</div>
-         </div>
-         <form @submit.prevent="addPost">
-            <textarea
-               type="text"
-               class="form-control block w-full resize-none bg-grey-light rounded"
-               v-model="postContent"
-               :rows="mode"
-               @focus="toggleForm(true)"
-               @blur="toggleForm(false)"
-            ></textarea>
-         </form>
+   <base-card class="flex gap-4" :class="focusedCard" @click="toggleForm(false)" >
+      <div class="rounded-full w-12 h-12 overflow-hidden">
+         <img
+            :src="image"
+            :alt="firstName + '-image'"
+            class="card-image"
+            v-if="isExistImage"
+         />
+         <div class="bg-gray-200 w-full h-full" v-else>{{ textAvatar }}</div>
       </div>
+      <form @submit.prevent="addPost" class="flex-1">
+         <textarea
+            type="text"
+            class="form-control block w-full resize-none bg-gray-200 rounded-lg overflow-hidden p-4 mb-4"
+            v-model="postContent"
+            :rows="formRows"
+            @focus="toggleForm(true)"
+            @click.stop
+         ></textarea>
+         <button
+            type="submit"
+            class="bg-blue-500 text-white inline-flex h-8 gap-2 px-6 items-center rounded-full"
+         >
+            <b-icon-upload></b-icon-upload>
+            Post
+         </button>
+      </form>
    </base-card>
 </template>
 
 <script>
+import { BIconUpload } from "bootstrap-icons-vue";
+import { mapGetters, mapActions } from "vuex";
+
 export default {
+   components: {
+      BIconUpload,
+   },
    data() {
       return {
          postContent: "",
-         isActiveForm: false,
       };
    },
    computed: {
-      mode() {
-         return this.isActiveForm ? 3 : 1;
+      ...mapGetters({
+         isActiveForm: "isFocusPostForm",
+      }),
+      focusedCard() {
+         return this.isActiveForm ? "shadow-lg" : "";
       },
+      formRows() {
+         return this.isActiveForm ? 3 : 1
+      }
    },
    methods: {
-      toggleForm(mode) {
-         this.isActiveForm = mode;
-      }
-   }
+      ...mapActions({
+         toggleForm: "togglePostForm",
+      }),
+   },
 };
 </script>
 
