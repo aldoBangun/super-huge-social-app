@@ -1,24 +1,33 @@
-# mini-social-app
+# Tweetbookgram App
 
-## Project setup
-```
-npm install
+## Disclaimer
+
+This app is supposed to learning only.
+
+
+## Lesson i got thus far
+
+- I think we should define our routes first. (In this case if you are working on your personal project solo)
+
+- Don't have to use `.env` file to hide APIKEY here on Front-End app, instead use something like what's explained on this [video tutorial](https://www.youtube.com/watch?v=2J3xbMkH2K4)
+
+## Installation
+
+1. Install dependencies `npm install`
+2. Create `apiconfig.js` file on your source folder: `./src/apiconfig.js` and paste this:
+
+```javascript
+   const API_URL = 'replace-with-your-API-url';
+   const API_KEY = 'replace-with-your-API-key';
+   export default { API_URL, API_KEY }
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+3. Run development mode `npm run serve` or production mode `npm run build`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+---
 
-### Lints and fixes files
-```
-npm run lint
-```
+> *If you see this message. that means this project isnt't finished yet. Hence, it's not ready for production!*
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+
+Author: [Aldo Bangun](https://facebook.com/aldopunk3)
