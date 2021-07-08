@@ -12,7 +12,8 @@
       <form @submit.prevent="addPost" class="flex-1">
          <textarea
             type="text"
-            class="form-control block w-full resize-none bg-gray-200 rounded-lg overflow-hidden p-4 mb-4"
+            class="form-control block w-full resize-none bg-gray-200 overflow-hidden  p-2 mb-4"
+            :class="roundType"
             v-model="postContent"
             :rows="formRows"
             @focus="toggleForm(true)"
@@ -51,6 +52,9 @@ export default {
       },
       formRows() {
          return this.isActiveForm ? 3 : 1
+      },
+      roundType() {
+         return this.isActiveForm ? 'rounded-lg' : 'rounded-full'
       }
    },
    methods: {
