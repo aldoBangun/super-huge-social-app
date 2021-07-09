@@ -42,5 +42,10 @@
    filter: brightness(.8);   
 }
 
+.btn-icon {
+   padding: 0;
+   background-color: transparent;
+}
+
 
 </style>
