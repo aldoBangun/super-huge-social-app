@@ -25,7 +25,7 @@ export default {
 }
 
 body {
-   @apply bg-gray-100;
+   @apply bg-blue-50;
    font-family: 'Poppins', sans-serif;
 }
 
