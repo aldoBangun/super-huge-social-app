@@ -1,6 +1,6 @@
 <template>
-   <header class="bg-white mb-8">
-      <nav class="vw-80 mx-auto h-20 flex-center justify-between">
+   <header class="bg-white mb-8 shadow-sm">
+      <nav class="vw-80 mx-auto h-16 flex-center justify-between">
          <div>
             <router-link to="/" class="text-blue-500 text-2xl font-bold">
                Tweetbookram
@@ -9,7 +9,7 @@
 
          <form @submit.prevent="searchUser" class="w-80 relative">
             <input type="text" v-model="inputedKeyword" class="w-full rounded-full bg-gray-100 pl-10 pr-4 py-1">
-            <base-button class="absolute top-1/2 left-1 transform -translate-y-1/2 text-gray-500">
+            <base-button type="submit" class="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500 btn-icon">
                <b-icon-search></b-icon-search>
             </base-button>
          </form>
