@@ -42,7 +42,8 @@ const router = createRouter({
             TheFooter
          }
       }
-   ]
+   ],
+   linkActiveClass: 'link-active'
 })
 
 export default router;
