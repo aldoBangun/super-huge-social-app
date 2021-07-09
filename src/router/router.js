@@ -1,6 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import PageHome from '../components/pages/PageHome.vue';
+import PageProfile from '../components/pages/PageProfile.vue';
+import PagePeople from '../components/pages/PagePeople.vue';
+import PageRegister from '../components/pages/PageRegister.vue';
+import PageLogin from '../components/pages/PageLogin.vue';
+import TheFooter from '../components/layout/TheFooter.vue';
 
 
 const router = createRouter({
