@@ -11,10 +11,12 @@ This app is supposed to learning only.
 
 - Don't have to use `.env` file to hide APIKEY here on Front-End app, instead use something like what's explained on this [video tutorial](https://www.youtube.com/watch?v=2J3xbMkH2K4)
 
+- [Tailwindcss](https://tailwindcss.com/) is such an awesome tool. I have to learn more about it and avoid some hacking on my components.
+
 ## Installation
 
 1. Install dependencies `npm install`
-2. Create `apiconfig.js` file on your source folder: `./src/apiconfig.js` and paste this:
+2. Create `apiconfig.js` file on your source folder: `./src/apiconfig.js` and paste this on it:
 
 ```javascript
    const API_URL = 'replace-with-your-API-url';
